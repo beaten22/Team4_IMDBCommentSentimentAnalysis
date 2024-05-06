@@ -1,0 +1,99 @@
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to        
+
+==================================================================================================
+ text (InputLayer)              [(None,)]            0           []
+
+
+
+ keras_layer (KerasLayer)       {'input_word_ids':   0           ['text[0][0]']      
+
+                                (None, 128),
+
+                                 'input_type_ids':
+
+                                (None, 128),
+
+                                 'input_mask': (Non
+
+                                e, 128)}
+
+
+
+ keras_layer_1 (KerasLayer)     {'sequence_output':  109482241   ['keras_layer[0][0]',
+                                 (None, 128, 768),                'keras_layer[0][1]',
+                                 'encoder_outputs':               'keras_layer[0][2]']
+                                 [(None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768),
+
+                                 (None, 128, 768)],
+
+                                 'default': (None,
+
+                                768),
+
+                                 'pooled_output': (
+
+                                None, 768)}
+
+
+
+ dropout (Dropout)              (None, 768)          0           ['keras_layer_1[0][13]']
+
+
+ output (Dense)                 (None, 1)            769         ['dropout[0][0]']
+
+==================================================================================================
+Total params: 109,483,010
+Trainable params: 769
+Non-trainable params: 109,482,241
+__________________________________________________________________________________________________
+None
+sentiment
+negative    0.503429
+positive    0.496571
+Name: proportion, dtype: float64
+Epoch 1/10
+ 1/59 [..............................] - ETA: 11:09 - loss: 0.9484 - accuracy: 0.3438 2/59 [>.............................] - ETA: 3:36 - loss: 0.8205 - accuracy: 0.4531  3/59 [>.............................] - ETA: 3:3559/59 [==============================] - 229s 4s/step - loss: 0.7057 - accuracy: 0.5336 - precision: 0.5306 - recall: 0.5265ecision: 0.4828 - recall: 0.9655
+Epoch 2/10
+59/59 [==============================] - 223s 4s/step - loss: 0.6771 - accuracy: 0.5670 - precision: 0.5624 - recall: 0.5764
+Epoch 3/10
+59/59 [==============================] - 215s 4s/step - loss: 0.6640 - accuracy: 0.6036 - precision: 0.6022 - recall: 0.5937
+Epoch 4/10
+59/59 [==============================] - 222s 4s/step - loss: 0.6554 - accuracy: 0.6014 - precision: 0.6086 - recall: 0.5525
+Epoch 5/10
+59/59 [==============================] - 219s 4s/step - loss: 0.6321 - accuracy: 0.6439 - precision: 0.6465 - recall: 0.6241
+Epoch 6/10
+59/59 [==============================] - 220s 4s/step - loss: 0.6382 - accuracy: 0.6466 - precision: 0.6403 - recall: 0.6576
+Epoch 7/10
+59/59 [==============================] - 217s 4s/step - loss: 0.6195 - accuracy: 0.6606 - precision: 0.6690 - recall: 0.6262
+Epoch 8/10
+59/59 [==============================] - 227s 4s/step - loss: 0.6155 - accuracy: 0.6579 - precision: 0.6600 - recall: 0.6414
+Epoch 9/10
+59/59 [==============================] - 221s 4s/step - loss: 0.6033 - accuracy: 0.6842 - precision: 0.6883 - recall: 0.6652
+Epoch 10/10
+59/59 [==============================] - 229s 4s/step - loss: 0.6029 - accuracy: 0.6805 - precision: 0.6871 - recall: 0.6544
+PS C:\Users\burka\OneDrive\Masaüstü\DataMiningProject> 
+
+
+

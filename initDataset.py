@@ -16,6 +16,7 @@ def init_dataset():
     #I dropped duplicated rows from dataset
     cleaned_df = df_dataset.drop_duplicates(subset=["review", "sentiment"])
     df = cleaned_df.dropna()
+    df = df.sample(frac=0.05, random_state=42)
 
     print(df.sentiment.value_counts(normalize = True))
 
